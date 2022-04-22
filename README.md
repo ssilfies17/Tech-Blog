@@ -5,7 +5,7 @@ A basic structure for an blog site that utilizes Express, Handlebars, and Sequel
 
 >Check out this screenshot for a better insight to how this baby works!
 
-#### ** Screenshot Link: [DEMO](https://tinyurl.com/y4c5k2ns) **
+### ** Screenshot Link: [DEMO](https://tinyurl.com/y4c5k2ns) **
 
 
 ## Table of Contents
