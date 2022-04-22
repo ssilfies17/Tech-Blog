@@ -33,11 +33,30 @@ router.get("/login", (req, res) => {
       return;
     }
     res.render("login");
-  });
+});
   
-  router.get("/dashboard", (req, res) => {
-    res.render("dashboard", { loggedIn: req.session.loggedIn });
-  });
+router.get("/dashboard", (req, res) => {
+  res.render("dashboard", { loggedIn: req.session.loggedIn });
+});
+
+router.get("/post/:id", async (req, res) => {
+  try {
+    const dbPostData = await Post.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ["username"],
+        },
+      ],
+    });
+
+    const post = dbPostData.get({ plain: true });
+    res.render("post", { post, loggedIn: req.session.loggedIn });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
 
 
