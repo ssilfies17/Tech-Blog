@@ -21,7 +21,7 @@ No installation is required! Application has a fully deployed Heroku version ava
 
 However for those interested in tinkering, follow along with the following steps:
 
-1. 1. Open an integrated terminal in the project's root directory and input the following command:
+1. Open an integrated terminal in the project's root directory and input the following command:
 
 ```bash
 npm install
